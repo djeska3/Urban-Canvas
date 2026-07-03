@@ -11,9 +11,11 @@ import MapKit
 
 
 struct StreetArtDetailView: View {
+    
     var streetart: StreetArt
     
     var isPictured: Bool
+ 
     
     var body: some View {
         
@@ -76,6 +78,10 @@ struct StreetArtDetailView: View {
                         .font(.callout)
                         .fontWeight(.bold)
                     Text(streetart.localisation)
+                        .font(.footnote)
+                }
+                HStack{
+                    Text("(Latitude : \(streetart.coordinates.latitude), Longitude : \(streetart.coordinates.longitude))")
                         .font(.footnote)
                 }
                 
